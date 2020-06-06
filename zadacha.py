@@ -51,3 +51,4 @@ for ii in spisok4[0]:
         spisok5.append(aaa)
 
 print(spisok5)
+print(2)
