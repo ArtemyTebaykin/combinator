@@ -23,32 +23,29 @@ while spisok_ch != []:
     for w in range(pr):
         spisok3.pop(0)
     spisok_ch.pop(0)
-print(spisok4)
-spisok5 = []
-x1 = 0
-y1 = 0
-x2 = 1
-y2 = 0
-def speen(x1,y1,x2,y2):
-    aa = ((spisok4[x1][y1][0]) + (spisok4[x2][y2][0]))
-    spisok5.append(aa)
-
 spisok6 = []
 for gg in spisok1:
     for ss in gg:
         spisok6.append(ss)
-print(spisok6)
-
 sp6 = copy.deepcopy(spisok6)
-
-for u in range(len(spisok4[0])):
-    sp6.remove([u])
-print(sp6)
-for ii in spisok4[0]:
-    for jj in sp6:
-        aaa = ii[0] + jj
-        aaa = [aaa]
-        spisok5.append(aaa)
-
+spisok5 = []
+if len(spisok1) == 2:
+    u = len(spisok4[0])
+    del sp6[:(u)]
+    for ii in spisok4[0]:
+        for jj in sp6:
+            aaa = ii[0] + jj
+            aaa = [aaa]
+            spisok5.append(aaa)
+else:
+    while len(spisok1) != 1:
+        u = len(spisok4[0])
+        del sp6[:(u)]
+        for ii in spisok4[0]:
+            for jj in sp6:
+                aaa = ii[0] + jj
+                aaa = [aaa]
+                spisok5.append(aaa)
+        spisok4.pop(0)
+        spisok1.pop(0)
 print(spisok5)
-print(2)
